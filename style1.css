@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+  }
+  
+  #image{
+    width: 500px;
+    max-width: 620px;
+    margin-left: -23px;
+    margin-top: 38px;
+    height: 427px;
+    /* margin: 20px; */
+    border-radius: 5px;
+}
+  .photo.sections label.main_photo_label {
+    position: absolute;
+    margin-top: -11px;
+    left: 0px;
+    background: #fff;
+    padding: 0px 10px;
+    margin-left: 35px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.photo.sections label.main_photo_label:before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 10px;
+    border: 1px solid #0000;
+}
+
+.photo.sections {
+    border: 1px solid #000;
+    height: 47px;
+    position: absolute;
+    width: 42%;
+    margin-top: -15px;
+    margin-left: 0px;
+    margin-bottom: 22px;
+    border-radius: 4px;
+    z-index: -2;
+}
+.lab .divison {
+  width: 29%;
+  float: left;
+}
+.lab .divison label, .lab .divison a label {
+  font-size: 13px !important;
+}
+.input-field #textsend,
+.input-field #text{
+  margin-right: -520px;
+  margin-top: 25px;
+  color: black;
+  border-radius: 3px;
+  background-color: rgb(244 244 179 / 51%);
+  border-radius: 4px;
+  padding: 5px 6px;
+}
+.button-side .left .btn {
+  margin-top: 0px !important;
+}
+.input-field #txt {
+  background: rgb(244 244 179 / 51%);
+  margin-top: -4px;
+  width: 465px;
+  border-radius: 4px;
+  padding: 5px 6px;
+}
+.button-side .btn_1 button,
+.button-side .btn button {
+    border: 1px solid #606060;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #606066;
+    box-shadow: 3px 4px 4px -3px #606066;
+    text-decoration: none;
+}
+.button-side .btn_1 button:disabled, .button-side .btn button:disabled {
+  color: lightgray;
+  background: transparent;
+}
+body{
+  font-family: Helvetica;
+}
+.input-field #text,.input-field input {
+  background: rgb(244 244 179 / 51%) !important;
+}

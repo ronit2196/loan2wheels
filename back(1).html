@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styleimg.css">
+<link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="magnify.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap');
+
+ body {
+  background: gray;
+  color: white;
+  margin: 0;
+}
+body{
+  font-family: Helvetica;
+}
+.popup .content {
+ position: absolute;
+ top: 60%;
+ left: 50%;
+ transform: translate(-50%,-150%) scale(0);
+ width: 1200px;
+ height: 720px;
+ z-index: 2;
+ text-align: center;
+ padding: 20px;
+ border-radius: 20px;
+ background: #fff;
+
+ z-index: 1;
+}
+
+.popup .close-btn {
+  position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 18px;
+    line-height: 0.7;
+    border: 2px solid black;
+    height: 18px;
+    /* color: white; */
+    color: black;
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 50%;
+    padding: 2px 5px 5px 2.5px;
+    background: #fff;
+ }
+
+.popup.active .content {
+transition: all 300ms ease-in-out;
+transform: translate(-50%,-50%) scale(1);
+}
+
+
+a {
+ font-weight: 600;
+ color: white;
+}
+
+.input-field label{
+  color: black;
+}
+
+.input-field #text{
+  margin-right: -520px;
+  margin-top: 25px;
+  color: black;
+  border-radius: 3px;
+  background-color: rgb(244, 244, 179);
+}
+
+.input-field .validate {
+  /*margin-top: -1024px;
+  margin-right: -520px;*/
+  padding: 5px 5px 5px 5px;
+  font-size: 16px;
+border-radius: 4px;
+
+border: 2px solid #000;
+border: none;
+
+color: black;
+background: rgb(244, 244, 179);
+
+}
+
+.first-button {
+color: black;
+font-size: 18px;
+font-weight: 500;
+padding: 30px 50px;
+border-radius: 40px;
+border: none;
+position: absolute;
+top: 50%;
+left: 20%;
+transform: translate(-50%, -50%);
+background: white;
+
+transition: box-shadow .35s ease !important;
+outline: none;
+}
+
+.vl {
+  border-left: 2px solid #a1a1a1;
+  height:755px;
+  position: absolute;
+  margin-top: 1px;
+  left: 45%;
+  margin-left: -3px;
+  top: 0;
+}
+.first-button:active {  
+background: linear-gradient(145deg, #222222, #292929);
+
+border: none;
+}
+.btn_2 {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn_2:hover {
+  background-color: #ddd;
+}
+
+.btn_2.active {
+  background-color: #666;
+  color: white;
+}
+
+
+.second-button:active{
+background: linear-gradient(145deg,#222222, #292929);
+box-shadow: 5px 5px 10px #262626, -5px -5px 10px #262626;
+border: none;
+outline: none;
+}
+p{
+color: #bfc0c0;
+padding: 20px;
+}
+
+
+
+.section {
+    width: 50%;
+    display: inline-block;
+    float: left;
+}
+
+.section.section-right form .input-field {
+    display: block;
+    text-align: left;
+	padding: 8px 0px 8px 0px;
+}
+
+.section.section-right form .input-field input.verify_checkbox {
+    float: right;
+    margin-right: 150px;
+    right: 40px;
+}
+
+.section.section-right form .input-field input.verify_checkbox {
+    float: right;
+    margin-right: 100px;
+    right: 40px;
+}
+.input-field label {
+    max-width: 125px;
+    display: inline-block;
+    width: 150px;
+    font-size: 13px;
+}
+
+
+.section.section-right form .input-field input {
+    min-width: 150px;
+    max-width: 150px;
+	    height: unset !important;
+		border: 1px solid #000 !important;
+}
+.section.section-right form .input-field  span.checked_label {
+    color: black;
+    position: absolute;
+    top: 50px;
+    margin-left: 100px;
+    }
+
+.section.section-right {
+    padding-top: 60px;
+}
+.section.section-right form .input-field  input.verify_checkbox.address_checkbox {
+    margin-top: 50px;
+}
+
+.button-side .left ,.button-side .right {
+    width: 50%;
+    float: left;
+}
+
+.button-side {
+    display: block;
+}
+.button-side .btn button {
+    width: max-content;
+}
+
+.button-side .left {
+    text-align: left;
+}
+.input-field .query_note {
+    width: 80%;
+}
+</style>
+
+<!---script for radio---------->
+<script>
+  function preLoad() {
+    a1 = new Image; a1.src = 'img/1.jpg';  
+    a2 = new Image; a2.src = 'img/2.jpg';
+    a3 = new Image; a3.src = 'img/3.jpg';
+  }
+  function im(image) {
+    document.getElementById(image[0]).src = eval(image + ".src")
+  }
+  </script>
+
+</head>
+<body onLoad="togglePopup();">
+ <div class="popup" id="popup-1">
+   <div class="content">
+   <div class="section section-left">
+
+    <div class="lab" style="color: black;padding-top: 50px; ">
+
+          <!---new--> 
+      <div class="photo sections">
+        <label class="main_photo_label">Photo</label>
+    </div>
+    <!---new end--> 
+    <div class="pan divison">
+        <input type="radio" id="pan" name="proof" value="Pancard">
+        <a href="pancard(1).html" style="text-decoration: none;"> <label for="html" style="color: black;font-size:small">Pancard</label></a>
+
+    </div>
+    <div class="adharcard divison">
+           <input type="radio" id="front" name="proof" value="Aadharcard_front" style="margin-left: 50px;">
+          <a href="aadharcard(1).html" style="text-decoration: none;"> <label for="css" style="color: black;font-size:small">Aadhar Front</label></a>
+    </div> 
+    <div class="adharcard_back divison">
+          <input type="radio" id="back" name="proof" value="Aadharcard_back" style="margin-left: 50px;" checked>
+          <label for="javascript">Aadhar Back</label>
+    </div>      
+      </div>
+     
+  <img src="03.jpg" id="image" class="zoom" data-magnify-src="03.jpg" style="align-items: center;margin-right: 50px;"><br>
+  
+      <script src="jquery.magnify.js" charset="utf-8"></script>
+      <script>
+      $(document).ready(function() {
+        $('.zoom').magnify();
+      });
+      </script>
+    <div class="vl"></div>
+   
+   </div>
+  
+	
+	<div class="section section-right">
+	<form>
+	  <a href="index.html"><div class="close-btn" onclick="togglePopup()">×</div></a>
+
+  <div class="input-field" >
+    <label style="">First Name:</label>
+    <input style="width: 50px;border: 2px solid #000;height: 5px;" placeholder="Nilesh" class="validate" value="Nilesh">
+	
+  </div>
+ 
+  <div class="input-field" >
+    <label style="">Last Name:</label>
+    <input style="width: 50px;border: 2px solid #000;height: 5px;"  placeholder="Singh" class="validate" value="Singh">
+	
+  </div>
+  <div class="input-field" >
+    <label style="">Pan No.: </label>
+    <input style="width: 105px;border: 2px solid #000;height: 5px;"  placeholder="Singh" class="validate" value="AAAAA9999A">
+	
+  </div>
+  <div class="input-field" >
+    <label style="">Father's Name: </label>
+    <input style="width: 105px;border: 2px solid #000;height: 5px;"  placeholder="Father Name" class="validate" value="Fathers Name">
+
+  </div>
+  <div class="input-field" >
+    <label style="" >Aadhar No.: </label>
+    <input style="width: 125px;border: 2px solid #000;height: 5px;"  placeholder="4444 3333 2222" class="validate" value="4444 3333 2222">
+	
+  </div>
+  <div class="input-field" >
+    <label style="" >Address: </label>
+    <textarea style=""  id="text" name="text" rows="5" cols="30" placeholder="Cheriyakkara, Kayyur, Cheravathur, Kayyur, Kayur, Kasaragod,Kerela 671313"></textarea>
+	
+  </div>
+  <div class="input-field">
+   
+    <textarea id="textsend" onkeyup="success()" class="query_note" style="" name="text" rows="5" cols="50" placeholder="Write Query here..."></textarea>
+	
+  </div>
+  <div class="input-field">
+    <textarea id="txt" class="query" style="" name="text" rows="3" cols="50" placeholder="Write note here..."></textarea>
+  </div>
+  <div class="button-side">
+    <div class="left"><div class="btn" style="margin-top: 15px;"> <button id="raise_query"  disabled>Raise query<label style="color: red;">!</label></button></div></div>
+    <div class="right"><div class="btn_1" style=""><button id="enable" >QC Done</button></div></div>
+    </div>
+  
+    
+   
+	
+	</form>
+	</div>
+	
+   </div>
+   
+  </div>
+ 
+
+  
+<script>
+ function togglePopup() {
+ document.getElementById("popup-1")
+  .classList.toggle("active");
+  window.onload = togglePopup;
+}
+function success() {
+	 if(document.getElementById("textsend").value==="") { 
+            document.getElementById('raise_query').disabled = true; 
+        } else { 
+            document.getElementById('raise_query').disabled = false;
+        }
+    }
+</script>
+
+</body>
+</html> 

@@ -1,0 +1,129 @@
+.top_bar {
+    background: rgb(20, 100, 246);
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.top_bar input.search_box {
+    margin: 5px 0px 0px 0px;
+    border-radius: 50px;
+    width: 75%;
+    border: 1px solid #000;
+    padding: 4px 0px 4px 30px;
+}
+.top_bar  i.bi.bi-search {
+    position: relative;
+    left: 30px;
+    color: #000;
+    font-size: 18px;
+}
+.content.start {
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.content.start label.tab_title {
+    font-size: 18px;
+    background: #606060;
+    padding: 5px 10px;
+    color: #fff;
+    font-weight: 600;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    margin-bottom: 0px;
+}
+
+.content.start .col-lg-12.col-md-12 {
+    border-bottom: 1px solid #a1a1a1;
+    margin-left: 15px;
+    padding-left: 0px;
+}
+
+
+.content.start .left-sidebar label.main_title {
+    display: block;
+    font-weight: 600;
+    position: absolute;
+    margin-top: -35px;
+    background: #fff;
+    padding: 0px 10px 0px 5px;
+    font-size: 15px;
+}
+.left.top  input[type="radio"] {
+    margin-right: 5px !important;
+    
+}
+.left.top label {
+    font-weight: 500;
+    font-size: 13px;
+}
+.left.top label.Unassigned {
+    font-weight: 700;
+}
+.left-sidebar .left.top {
+    width: 100%;
+    margin-top: 25px;
+    border: 1px solid #a1a1a1;
+    padding: 25px 15px 10px 15px;
+    border-radius: 4px;
+}       
+
+.left.bottom  input[type="radio"] {
+    margin-right: 5px !important;
+    
+}
+.left.bottom label {
+    font-weight: 500;
+    font-size: 13px;
+}
+.left.bottom label.Unassigned {
+    font-weight: 700;
+}
+.left-sidebar .left.bottom {
+    width: 100%;
+    margin-top: 25px;
+    border: 1px solid #a1a1a1;
+    padding: 25px 15px 10px 15px;
+    border-radius: 4px;
+}       
+
+.right-sidebar thead {
+    margin: 50px 0px 0px 0px !important;
+}
+
+.right-sidebar table {
+    margin: 20px 0px 0px 0px !important;
+}
+
+.right-sidebar table tbody td {
+    padding: 15px 25px 15px 0px;
+    font-size: 16px;
+}
+
+.right-sidebar table thead th {
+    font-size: 16px;
+}
+
+.right-sidebar table tbody td a {
+    border: 1px solid #606060;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #606066;
+    box-shadow: 3px 4px 4px -3px #606066;
+    text-decoration: none;
+}
+
+.button-side .btn_1 button,
+.button-side .btn button {
+    border: 1px solid #606060;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #606066;
+    box-shadow: 3px 4px 4px -3px #606066;
+    text-decoration: none;
+}
+.input-field #text,.input-field input {
+    background: rgb(244 244 179 / 51%) !important;
+}
+
+.disable_element {color: #6060665e !important;box-shadow: none !important;pointer-events: none;}
